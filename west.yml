@@ -1,0 +1,20 @@
+manifest:
+
+  projects:
+    - name: zephyr
+      url: https://github.com/zephyrproject-rtos/zephyr
+      revision: v3.5.0
+      path: zephyr
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_stm32
+
+    - name: module-udynlink
+      url: https://github.com/kinsamanka/udynlink
+      revision: master
+      path: modules/lib/udynlink
+
+  self:
+    path: udynlink-app
